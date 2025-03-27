@@ -5,11 +5,9 @@ import Interests from "./components/Interests";
 
 export default function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
-      <div className="container">
         <Chat />
-      </div>
       <Interests/>
       <Footer/>
     </div>

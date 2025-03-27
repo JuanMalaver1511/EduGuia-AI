@@ -8,12 +8,22 @@ body {
     align-items: center;
   }
 
-  
+  .header {
+    background: linear-gradient(90deg, #3d80f6, #9035ea);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 15px;
+    margin-bottom: 40px;
+    border-radius: 0 0 15px 15px ;
+    height: 90px;
+}
+
   .container {
     max-width: 1200px;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
     overflow: hidden;
   }
   .container h2, p{
@@ -26,17 +36,7 @@ body {
   margin-bottom: 20px;
 }
   
-  .header {
-    background: linear-gradient(90deg, #3d80f6, #9035ea);
-    color: white;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    font-size: 15px;
-    margin-bottom: 40px;
-    border-radius: 15px;
-    height: 90px;
-}
+
 
 .iconUniver {
     margin-right: 15px;
@@ -79,6 +79,11 @@ body {
   background: linear-gradient(90deg, #3d80f6, #9035ea) !important;
   font-weight: bold;
   color: rgb(255, 255, 255) !important;
+}
+
+.selectedCard{
+  background: linear-gradient(90deg, #ceddf6, #d3d3d3) !important;
+  font-weight: bold;
 }
 
 .chat-box {
@@ -177,12 +182,11 @@ body {
 .message {
   padding: 10px 15px;
   border-radius: 15px;
-  max-width: 60%; /* Limita el ancho de los mensajes */
-  display: inline-block; /* Se ajusta al contenido */
-  word-wrap: break-word; /* Evita que palabras largas rompan el diseño */
+  max-width: 60%; 
+  display: inline-block; 
+  word-wrap: break-word; 
 }
 
-/* Mensajes del usuario (alineados a la derecha) */
 .message.user {
   background: #91b9ee;
   color: white;
@@ -193,7 +197,7 @@ body {
 
 /* Mensajes del bot (alineados a la izquierda) */
 .message.bot {
-  background: #c29df5;
+  background: #75769b;
   color: white;
   align-self: flex-start; 
   text-align: left;
@@ -201,15 +205,36 @@ body {
 }
 
 
-
-/* Contenedor principal */
+/* Contenedor de intereses */
 .interests-container {
   display: flex;
+  flex-wrap: wrap; 
   justify-content: center;
   gap: 20px;
   padding: 40px;
   background: none;
+  align-items: center;
 }
+
+/* Cuando una tarjeta es seleccionada, reorganizar */
+.interests-container.show-details {
+  flex-direction: column; /* Poner los detalles debajo */
+  align-items: center;
+}
+
+/* Contenedor de detalles */
+.details-container {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Mostrar cuando una tarjeta está seleccionada */
+.details-container.active {
+  display: block;
+}
+
+
 
 /* Tarjetas */
 .interest-card {
@@ -267,6 +292,53 @@ body {
   overflow-wrap: break-word; 
   word-break: break-word;
   white-space: normal; 
+}
+
+.details-section {
+  margin-top: 20px;
+  padding: 15px;
+  border-top: 2px solid #333;
+  background: #f1f1f1;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.university-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.carrer-name{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+
+.star-icon {
+  color: gold;
+  margin: 0 2px;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+}
+
+.description-carrer{
+  font-size: 14px;
+  color: #555;
+  text-align: left;
 }
 
 
@@ -333,10 +405,6 @@ body {
   .chat-input button {
       width: 100%;
       margin-top: 10px;
-  }
-  .interests-container {
-      flex-direction: column;
-      align-items: center;
   }
   .interest-card {
       width: 90%;
