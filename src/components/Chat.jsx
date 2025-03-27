@@ -14,7 +14,7 @@ export default function Chat() {
     setInput("");
     
     setTimeout(() => {
-      setMessages((prev) => [...prev, { text: "Respuesta automática 🤖", sender: "bot" }]);
+      setMessages((prev) => [...prev, { text: "Respuesta automática 🤖 ", sender: "bot" }]);
     }, 1000);
   };
 
