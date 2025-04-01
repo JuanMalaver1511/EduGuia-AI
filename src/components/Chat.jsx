@@ -14,7 +14,7 @@ export default function Chat() {
     setInput("");
     
     setTimeout(() => {
-      setMessages((prev) => [...prev, { text: "Respuesta automática 🤖 ", sender: "bot" }]);
+      setMessages((prev) => [...prev, { text: "¡Hola! 👋 ¿En qué puedo ayudarte hoy? 😊 Selcciona las materias que te llaman la atención para que te pueda asesorar.", sender: "bot" }]);
     }, 1000);
   };
 
