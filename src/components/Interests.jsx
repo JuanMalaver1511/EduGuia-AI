@@ -3,11 +3,7 @@ import { BookOpen, GraduationCap, Landmark, Star, Rocket,Flame} from "lucide-rea
 
 export default function Interests() {
     const [selectedIndex, setSelectedIndex] = useState(null);
-    const Icones = [
-        {
-            
-        }
-    ]
+
     const interests = [
         {
             icon: <BookOpen size={40} className="icon" />,
