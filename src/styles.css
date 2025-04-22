@@ -377,59 +377,101 @@ body {
     text-decoration: underline;
 }
 
-/* Media Queries */
+/* Media Queries Mejoradas */
 @media (max-width: 1024px) {
   .container {
-      width: 95%;
-      max-width: 700px;
+    width: 95%;
+    max-width: 800px;
+    padding: 20px;
   }
+
   .cursos-grid {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .interest-card {
+    width: 90%;
+    max-width: 280px;
   }
 }
 
 @media (max-width: 768px) {
   .header {
-      flex-direction: column;
-      text-align: center;
-      height: auto;
-      padding: 10px;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 20px 10px;
   }
+
+  .container h2, p {
+    width: 90%;
+  }
+
   .cursos-grid {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    padding: 15px;
   }
+
   .chat-input {
-      flex-direction: column;
-      align-items: stretch;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
   }
+
   .chat-input button {
-      width: 100%;
-      margin-top: 10px;
+    width: 100%;
   }
+
   .interest-card {
-      width: 90%;
-      max-width: 300px;
+    width: 95%;
+    max-width: 100%;
+  }
+
+  .interests-container {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .details-container {
+    padding: 0 15px;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-      width: 100%;
-      padding: 10px;
+    width: 100%;
+    padding: 10px;
   }
+
   .cursos-grid {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
+
   .chat-box {
-      font-size: 14px;
+    font-size: 14px;
   }
+
   .chat-input {
-      flex-direction: column;
+    flex-direction: column;
   }
+
   .chat-input input {
-      width: 100%;
-      margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .interest-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .header {
+    padding: 15px;
+  }
+
+  .footer {
+    padding: 1rem 0.5rem;
   }
 }
-
-  
