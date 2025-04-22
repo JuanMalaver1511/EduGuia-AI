@@ -188,7 +188,7 @@ body {
 }
 
 .message.user {
-  background: #91b9ee;
+  background: #3c88ec;
   color: white;
   align-self: flex-end; 
   text-align: right;
@@ -197,7 +197,7 @@ body {
 
 /* Mensajes del bot (alineados a la izquierda) */
 .message.bot {
-  background: #75769b;
+  background: #614275;
   color: white;
   align-self: flex-start; 
   text-align: left;
